@@ -13,6 +13,28 @@ namespace HV2020.Eservice.WCF.Felanmalan
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class FelanmalanService : IFelanmalanService
     {
+        public DataSender DataTransfer()
+        {
+            DataSender bigOBJ = new DataSender();
+            
+        //public HashSet<AdressData> adresser { get; set; }
+            bigOBJ.adresser = ReadAllAdress();
+        //public HashSet<GranskadData> granskade { get; set; }
+            bigOBJ.granskade = ReadAllGranskad();
+        //public HashSet<OrtData> orter { get; set; }
+            bigOBJ.orter = ReadAllOrt();
+        //public HashSet<PersonData> personer { get; set; }
+            bigOBJ.personer = ReadAllPerson();
+        //public HashSet<PersonTypData> personTyper { get; set; }
+            bigOBJ.personTyper = ReadAllPersonTyp();
+        //public HashSet<SynpunktData> synpunkter { get; set; }
+            bigOBJ.synpunkter= ReadAllSynpunkt();
+        //public HashSet<TelefonData> telefoner { get; set; }
+            bigOBJ.telefoner = ReadAllTelefon();
+        //public HashSet<VerksamhetData> verksamheter { get; set; }
+            bigOBJ.verksamheter = ReadAllVerksamhet();
+            return bigOBJ;
+        }
         public void CreateAdress(int postnummer, string gata, int personID)
         {
             throw new NotImplementedException();
@@ -118,6 +140,7 @@ namespace HV2020.Eservice.WCF.Felanmalan
 
         public HashSet<AdressData> ReadAllAdress()
         {
+            //Ett HashSet är en Lista med unika element om man passar ett objekt anpassar sig listans storlek efter objektet.
             HashSet<AdressData> resultat = new HashSet<AdressData>();
             using (AnsokanModel db = new AnsokanModel()) {
                 var datacollektion = db.Adress.OrderBy(e=>e.Postnummer).ToList();

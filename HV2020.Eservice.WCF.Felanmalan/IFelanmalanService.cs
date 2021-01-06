@@ -11,6 +11,9 @@ namespace HV2020.Eservice.WCF.Felanmalan
     [ServiceContract]
     public interface IFelanmalanService
     {
+        //skicka hela databasen
+        [OperationContract]
+        DataSender DataTransfer();
         //Create-----------
         [OperationContract]
         void CreatePerson (string epost);
@@ -46,6 +49,27 @@ namespace HV2020.Eservice.WCF.Felanmalan
         [OperationContract]
         HashSet<GranskadData> ReadAllGranskad();
         //Update--------------------------------------------------------------------
+    }
+    [DataContract]
+    public class DataSender
+    {
+        [DataMember]
+        public HashSet<PersonData> personer { get; set; }
+        [DataMember]
+        public HashSet<TelefonData> telefoner { get; set; }
+        [DataMember]
+        public HashSet<PersonTypData> personTyper { get; set; }
+        [DataMember]
+        public HashSet<AdressData> adresser { get; set; }
+        [DataMember]
+        public HashSet<OrtData> orter { get; set; }
+        [DataMember]
+        public HashSet<VerksamhetData> verksamheter { get; set; }
+        [DataMember]
+        public HashSet<GranskadData> granskade { get; set; }
+        [DataMember]
+        public HashSet<SynpunktData> synpunkter { get; set; }
+
     }
 
     [DataContract]
