@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HV2020.Eservice.Klient.MVC.Models.Emil
+namespace HV2020.Eservice.Klient.MVC.Models.Emil.DataModels
 {
     public partial class DataTransferModels
     {

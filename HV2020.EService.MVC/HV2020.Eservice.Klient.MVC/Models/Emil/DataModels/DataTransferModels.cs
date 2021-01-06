@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HV2020.Eservice.Klient.MVC.Models.Emil
+namespace HV2020.Eservice.Klient.MVC.Models.Emil.DataModels
 {
     public partial class DataTransferModels
     {
