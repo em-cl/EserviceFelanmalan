@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using HV2020.Eservice.Klient.MVC.Models.Emil.DataModels
+using HV2020.Eservice.Klient.MVC.Models.Emil.DataModels;
+using HV2020.Eservice.Klient.MVC.Models.Emil.Utilities;
 
 namespace HV2020.Eservice.Klient.MVC.Controllers
 {
@@ -12,10 +13,8 @@ namespace HV2020.Eservice.Klient.MVC.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            FelanmalanServiceReference.DataSender klient = new FelanmalanServiceReference.DataSender();
-            
-            
-            return View();
+            HelperClasses.Keys help = new HelperClasses.Keys();
+            return View(help.FetchKeys());
         }
     }
 }
