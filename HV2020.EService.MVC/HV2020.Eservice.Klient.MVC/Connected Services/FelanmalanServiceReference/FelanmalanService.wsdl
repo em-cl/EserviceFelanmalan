@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FelanmalanService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:34662/FelanmalanService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:34662/FelanmalanService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:34662/FelanmalanService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFelanmalanService_DataTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DataTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_DataTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DataTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePerson" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreatePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateTelefon_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTelefon" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateTelefon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTelefonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateAdress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdress" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateAdress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateOrt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrt" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateOrt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreatePersonTyp_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePersonTyp" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreatePersonTyp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePersonTypResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateSynpunkt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSynpunkt" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateSynpunkt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSynpunktResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateVerksamhet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVerksamhet" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateVerksamhet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVerksamhetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateGranskad_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGranskad" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_CreateGranskad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGranskadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllPerson" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllTelefon_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllTelefon" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllTelefon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllTelefonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllAdress_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllAdress" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllAdress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllAdressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllOrt_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllOrt" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllOrt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllOrtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllPersonTyp_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllPersonTyp" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllPersonTyp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllPersonTypResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllSynpunkt_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllSynpunkt" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllSynpunkt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllSynpunktResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllVerksamhet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllVerksamhet" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllVerksamhet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllVerksamhetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllGranskad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllGranskad" />
+  </wsdl:message>
+  <wsdl:message name="IFelanmalanService_ReadAllGranskad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadAllGranskadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFelanmalanService">
+    <wsdl:operation name="DataTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/DataTransfer" message="tns:IFelanmalanService_DataTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/DataTransferResponse" message="tns:IFelanmalanService_DataTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreatePerson" message="tns:IFelanmalanService_CreatePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreatePersonResponse" message="tns:IFelanmalanService_CreatePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTelefon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreateTelefon" message="tns:IFelanmalanService_CreateTelefon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreateTelefonResponse" message="tns:IFelanmalanService_CreateTelefon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreateAdress" message="tns:IFelanmalanService_CreateAdress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreateAdressResponse" message="tns:IFelanmalanService_CreateAdress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreateOrt" message="tns:IFelanmalanService_CreateOrt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreateOrtResponse" message="tns:IFelanmalanService_CreateOrt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePersonTyp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreatePersonTyp" message="tns:IFelanmalanService_CreatePersonTyp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreatePersonTypResponse" message="tns:IFelanmalanService_CreatePersonTyp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSynpunkt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreateSynpunkt" message="tns:IFelanmalanService_CreateSynpunkt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreateSynpunktResponse" message="tns:IFelanmalanService_CreateSynpunkt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVerksamhet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreateVerksamhet" message="tns:IFelanmalanService_CreateVerksamhet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreateVerksamhetResponse" message="tns:IFelanmalanService_CreateVerksamhet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGranskad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/CreateGranskad" message="tns:IFelanmalanService_CreateGranskad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/CreateGranskadResponse" message="tns:IFelanmalanService_CreateGranskad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllPerson" message="tns:IFelanmalanService_ReadAllPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllPersonResponse" message="tns:IFelanmalanService_ReadAllPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllTelefon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllTelefon" message="tns:IFelanmalanService_ReadAllTelefon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllTelefonResponse" message="tns:IFelanmalanService_ReadAllTelefon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllAdress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllAdress" message="tns:IFelanmalanService_ReadAllAdress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllAdressResponse" message="tns:IFelanmalanService_ReadAllAdress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllOrt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllOrt" message="tns:IFelanmalanService_ReadAllOrt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllOrtResponse" message="tns:IFelanmalanService_ReadAllOrt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllPersonTyp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllPersonTyp" message="tns:IFelanmalanService_ReadAllPersonTyp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllPersonTypResponse" message="tns:IFelanmalanService_ReadAllPersonTyp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllSynpunkt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllSynpunkt" message="tns:IFelanmalanService_ReadAllSynpunkt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllSynpunktResponse" message="tns:IFelanmalanService_ReadAllSynpunkt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllVerksamhet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllVerksamhet" message="tns:IFelanmalanService_ReadAllVerksamhet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllVerksamhetResponse" message="tns:IFelanmalanService_ReadAllVerksamhet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllGranskad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllGranskad" message="tns:IFelanmalanService_ReadAllGranskad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFelanmalanService/ReadAllGranskadResponse" message="tns:IFelanmalanService_ReadAllGranskad_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFelanmalanService" type="tns:IFelanmalanService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DataTransfer">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/DataTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePerson">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTelefon">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreateTelefon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdress">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreateAdress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrt">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreateOrt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePersonTyp">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreatePersonTyp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSynpunkt">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreateSynpunkt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVerksamhet">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreateVerksamhet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGranskad">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/CreateGranskad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllPerson">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllTelefon">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllTelefon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllAdress">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllAdress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllOrt">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllOrt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllPersonTyp">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllPersonTyp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllSynpunkt">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllSynpunkt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllVerksamhet">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllVerksamhet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadAllGranskad">
+      <soap:operation soapAction="http://tempuri.org/IFelanmalanService/ReadAllGranskad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FelanmalanService">
+    <wsdl:port name="BasicHttpBinding_IFelanmalanService" binding="tns:BasicHttpBinding_IFelanmalanService">
+      <soap:address location="http://localhost:34662/FelanmalanService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34662/FelanmalanService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" />
+  <xs:element name="DataTransfer">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataTransferResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="DataTransferResult" nillable="true" type="q1:DataSender" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="epost" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePersonResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTelefon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="telefonnummer" type="xs:int" />
+        <xs:element minOccurs="0" name="personID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTelefonResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAdress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="postnummer" type="xs:int" />
+        <xs:element minOccurs="0" name="gata" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="personID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAdressResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="postnummer" type="xs:int" />
+        <xs:element minOccurs="0" name="ort" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrtResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePersonTyp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="personID" type="xs:int" />
+        <xs:element minOccurs="0" name="personTyp" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePersonTypResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSynpunkt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="enhet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="datumMottagit" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="synpunkText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="avseende" type="xs:short" />
+        <xs:element minOccurs="0" name="personID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSynpunktResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVerksamhet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="enhet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="verksamhet" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVerksamhetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGranskad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="datumGranskad" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="synpunktID" type="xs:int" />
+        <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGranskadResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllPerson">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllPersonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllPersonResult" nillable="true" type="q2:ArrayOfPersonData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllTelefon">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllTelefonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllTelefonResult" nillable="true" type="q3:ArrayOfTelefonData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllAdress">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllAdressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllAdressResult" nillable="true" type="q4:ArrayOfAdressData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllOrt">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllOrtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllOrtResult" nillable="true" type="q5:ArrayOfOrtData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllPersonTyp">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllPersonTypResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllPersonTypResult" nillable="true" type="q6:ArrayOfPersonTypData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllSynpunkt">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllSynpunktResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllSynpunktResult" nillable="true" type="q7:ArrayOfSynpunktData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllVerksamhet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllVerksamhetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllVerksamhetResult" nillable="true" type="q8:ArrayOfVerksamhetData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllGranskad">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadAllGranskadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" minOccurs="0" name="ReadAllGranskadResult" nillable="true" type="q9:ArrayOfGranskadData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

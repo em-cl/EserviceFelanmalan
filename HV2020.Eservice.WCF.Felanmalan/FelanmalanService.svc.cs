@@ -28,7 +28,7 @@ namespace HV2020.Eservice.WCF.Felanmalan
         //public HashSet<PersonTypData> personTyper { get; set; }
             bigOBJ.personTyper = ReadAllPersonTyp();
         //public HashSet<SynpunktData> synpunkter { get; set; }
-            bigOBJ.synpunkter= ReadAllSynpunkt();
+            bigOBJ.synpunkter = ReadAllSynpunkt();
         //public HashSet<TelefonData> telefoner { get; set; }
             bigOBJ.telefoner = ReadAllTelefon();
         //public HashSet<VerksamhetData> verksamheter { get; set; }

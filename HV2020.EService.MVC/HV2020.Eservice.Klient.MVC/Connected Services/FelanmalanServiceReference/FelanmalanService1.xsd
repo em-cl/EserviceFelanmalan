@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HV2020.Eservice.WCF.Felanmalan" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DataSender">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adresser" nillable="true" type="tns:ArrayOfAdressData" />
+      <xs:element minOccurs="0" name="granskade" nillable="true" type="tns:ArrayOfGranskadData" />
+      <xs:element minOccurs="0" name="orter" nillable="true" type="tns:ArrayOfOrtData" />
+      <xs:element minOccurs="0" name="personTyper" nillable="true" type="tns:ArrayOfPersonTypData" />
+      <xs:element minOccurs="0" name="personer" nillable="true" type="tns:ArrayOfPersonData" />
+      <xs:element minOccurs="0" name="synpunkter" nillable="true" type="tns:ArrayOfSynpunktData" />
+      <xs:element minOccurs="0" name="telefoner" nillable="true" type="tns:ArrayOfTelefonData" />
+      <xs:element minOccurs="0" name="verksamheter" nillable="true" type="tns:ArrayOfVerksamhetData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSender" nillable="true" type="tns:DataSender" />
+  <xs:complexType name="ArrayOfAdressData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdressData" nillable="true" type="tns:AdressData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdressData" nillable="true" type="tns:ArrayOfAdressData" />
+  <xs:complexType name="AdressData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Gata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrtData" nillable="true" type="tns:Ort" />
+      <xs:element minOccurs="0" name="PersonData" nillable="true" type="tns:Person" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="Postnummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdressData" nillable="true" type="tns:AdressData" />
+  <xs:complexType name="Ort">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adress" nillable="true" type="tns:Adress" />
+      <xs:element minOccurs="0" name="Ort1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postnummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ort" nillable="true" type="tns:Ort" />
+  <xs:complexType name="Adress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Gata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ort" nillable="true" type="tns:Ort" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:Person" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="Postnummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Adress" nillable="true" type="tns:Adress" />
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adress" nillable="true" type="tns:ArrayOfAdress" />
+      <xs:element minOccurs="0" name="Epost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonTyp" nillable="true" type="tns:PersonTyp" />
+      <xs:element minOccurs="0" name="Synpunkt" nillable="true" type="tns:ArrayOfSynpunkt" />
+      <xs:element minOccurs="0" name="Telefon" nillable="true" type="tns:ArrayOfTelefon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="ArrayOfAdress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Adress" nillable="true" type="tns:Adress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdress" nillable="true" type="tns:ArrayOfAdress" />
+  <xs:complexType name="PersonTyp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:Person" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonTyp1" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonTyp" nillable="true" type="tns:PersonTyp" />
+  <xs:complexType name="ArrayOfSynpunkt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Synpunkt" nillable="true" type="tns:Synpunkt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSynpunkt" nillable="true" type="tns:ArrayOfSynpunkt" />
+  <xs:complexType name="Synpunkt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Avseende" type="xs:short" />
+      <xs:element minOccurs="0" name="DatumMottagit" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Enhet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Granskad" nillable="true" type="tns:ArrayOfGranskad" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:Person" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="SynpunkText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SynpunktID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Synpunkt" nillable="true" type="tns:Synpunkt" />
+  <xs:complexType name="ArrayOfGranskad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Granskad" nillable="true" type="tns:Granskad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGranskad" nillable="true" type="tns:ArrayOfGranskad" />
+  <xs:complexType name="Granskad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatumGranskad" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DokumentNr" type="xs:int" />
+      <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Synpunkt" nillable="true" type="tns:Synpunkt" />
+      <xs:element minOccurs="0" name="SynpunktID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Granskad" nillable="true" type="tns:Granskad" />
+  <xs:complexType name="ArrayOfTelefon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Telefon" nillable="true" type="tns:Telefon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTelefon" nillable="true" type="tns:ArrayOfTelefon" />
+  <xs:complexType name="Telefon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:Person" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="Telefonnummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Telefon" nillable="true" type="tns:Telefon" />
+  <xs:complexType name="ArrayOfGranskadData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GranskadData" nillable="true" type="tns:GranskadData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGranskadData" nillable="true" type="tns:ArrayOfGranskadData" />
+  <xs:complexType name="GranskadData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatumGranskad" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DokumentNr" type="xs:int" />
+      <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SynpunktData" nillable="true" type="tns:SynpunktData" />
+      <xs:element minOccurs="0" name="SynpunktID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GranskadData" nillable="true" type="tns:GranskadData" />
+  <xs:complexType name="SynpunktData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Avseende" type="xs:short" />
+      <xs:element minOccurs="0" name="DatumMottagit" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Enhet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Granskad" nillable="true" type="tns:ArrayOfGranskadData" />
+      <xs:element minOccurs="0" name="PersonData" nillable="true" type="tns:PersonData" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="SynpunkText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SynpunktID" type="xs:int" />
+      <xs:element minOccurs="0" name="verksamhetData" nillable="true" type="tns:VerksamhetData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SynpunktData" nillable="true" type="tns:SynpunktData" />
+  <xs:complexType name="PersonData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adresserer" nillable="true" type="tns:ArrayOfAdressData" />
+      <xs:element minOccurs="0" name="Epost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonTyp" nillable="true" type="tns:PersonTyp" />
+      <xs:element minOccurs="0" name="Synpunkter" nillable="true" type="tns:ArrayOfSynpunktData" />
+      <xs:element minOccurs="0" name="Telefoner" nillable="true" type="tns:ArrayOfTelefonData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonData" nillable="true" type="tns:PersonData" />
+  <xs:complexType name="ArrayOfSynpunktData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SynpunktData" nillable="true" type="tns:SynpunktData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSynpunktData" nillable="true" type="tns:ArrayOfSynpunktData" />
+  <xs:complexType name="ArrayOfTelefonData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TelefonData" nillable="true" type="tns:TelefonData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTelefonData" nillable="true" type="tns:ArrayOfTelefonData" />
+  <xs:complexType name="TelefonData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="Telefonnummer" type="xs:int" />
+      <xs:element minOccurs="0" name="persondata" nillable="true" type="tns:PersonData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TelefonData" nillable="true" type="tns:TelefonData" />
+  <xs:complexType name="VerksamhetData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enhet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Verksamhet" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerksamhetData" nillable="true" type="tns:VerksamhetData" />
+  <xs:complexType name="ArrayOfOrtData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrtData" nillable="true" type="tns:OrtData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrtData" nillable="true" type="tns:ArrayOfOrtData" />
+  <xs:complexType name="OrtData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdressData" nillable="true" type="tns:AdressData" />
+      <xs:element minOccurs="0" name="Ort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postnummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrtData" nillable="true" type="tns:OrtData" />
+  <xs:complexType name="ArrayOfPersonTypData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonTypData" nillable="true" type="tns:PersonTypData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonTypData" nillable="true" type="tns:ArrayOfPersonTypData" />
+  <xs:complexType name="PersonTypData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PersonData" nillable="true" type="tns:PersonData" />
+      <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonTyp" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonTypData" nillable="true" type="tns:PersonTypData" />
+  <xs:complexType name="ArrayOfPersonData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonData" nillable="true" type="tns:PersonData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonData" nillable="true" type="tns:ArrayOfPersonData" />
+  <xs:complexType name="ArrayOfVerksamhetData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VerksamhetData" nillable="true" type="tns:VerksamhetData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVerksamhetData" nillable="true" type="tns:ArrayOfVerksamhetData" />
+</xs:schema>

@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,19 +90,87 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\FelanmalanServiceReference\FelanmalanService.disco" />
+    <None Include="Connected Services\FelanmalanServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\FelanmalanServiceReference\configuration.svcinfo" />
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.AdressData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.DataSender.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.GranskadData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.OrtData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.PersonData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.PersonTypData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.SynpunktData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.TelefonData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FelanmalanServiceReference\HV2020.Eservice.Klient.MVC.FelanmalanServiceReference.VerksamhetData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\FelanmalanServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\FelanmalanServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InputFormController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\TacksidaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Emil\AdressData.cs" />
+    <Compile Include="Models\Emil\DataTransferModels.cs" />
+    <Compile Include="Models\Emil\GranskadData.cs" />
+    <Compile Include="Models\Emil\OrtData.cs" />
+    <Compile Include="Models\Emil\PersonData.cs" />
+    <Compile Include="Models\Emil\PersonTypData.cs" />
+    <Compile Include="Models\Emil\SynpunktData.cs" />
+    <Compile Include="Models\Emil\TelefonData.cs" />
+    <Compile Include="Models\Emil\VerksamhetData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <None Include="Connected Services\FelanmalanServiceReference\FelanmalanService.wsdl" />
+    <None Include="Connected Services\FelanmalanServiceReference\FelanmalanService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FelanmalanServiceReference\FelanmalanService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FelanmalanServiceReference\FelanmalanService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\InputForm\Index.cshtml" />
+    <Content Include="Views\Tacksida\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,8 +180,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Models\Altug\" />
+    <Folder Include="Models\Elmira\" />
+    <Folder Include="Models\Pedro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\FelanmalanServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

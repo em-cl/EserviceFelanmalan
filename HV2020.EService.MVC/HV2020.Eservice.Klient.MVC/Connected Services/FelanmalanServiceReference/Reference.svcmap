@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="799385c9-9342-419d-884b-1530d6592aee" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:34662/FelanmalanService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FelanmalanService.xsd" MetadataType="Schema" ID="ca49d110-638a-4d64-b48c-9a3a3b9f929f" SourceId="1" SourceUrl="http://localhost:34662/FelanmalanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FelanmalanService.wsdl" MetadataType="Wsdl" ID="eb0e100b-022d-4018-a447-7e84472a39a3" SourceId="1" SourceUrl="http://localhost:34662/FelanmalanService.svc?wsdl" />
+    <MetadataFile FileName="FelanmalanService.disco" MetadataType="Disco" ID="5c3a8b30-8365-419d-b371-36edb1604c51" SourceId="1" SourceUrl="http://localhost:34662/FelanmalanService.svc?disco" />
+    <MetadataFile FileName="FelanmalanService1.xsd" MetadataType="Schema" ID="57d4b8e9-fce0-4438-b0b7-f68e86cc29cc" SourceId="1" SourceUrl="http://localhost:34662/FelanmalanService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FelanmalanService2.xsd" MetadataType="Schema" ID="6046a54a-a42f-4ee8-8526-c3609185d8c4" SourceId="1" SourceUrl="http://localhost:34662/FelanmalanService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
