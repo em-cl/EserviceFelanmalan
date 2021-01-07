@@ -11,7 +11,7 @@ namespace HV2020.Eservice.WCF.Felanmalan
     [ServiceContract]
     public interface IFelanmalanService
     {
-        //skicka hela databasen
+         //skicka hela databasen
         [OperationContract]
         DataSender DataTransfer();
         //Create-----------
@@ -49,7 +49,42 @@ namespace HV2020.Eservice.WCF.Felanmalan
         [OperationContract]
         HashSet<GranskadData> ReadAllGranskad();
         //Update--------------------------------------------------------------------
+        [OperationContract]
+        void UpdatePerson(int personID, string epost);
+        [OperationContract]
+        void UpdateTelefon(int telefonnummer, int personID);
+        [OperationContract]
+        void UpdateAdress(int postnummer, string gata, int personID);
+        [OperationContract]
+        void UpdateOrt(int postnummer, string ort);
+        [OperationContract]
+        void UpdatePersonTyp(int personID, bool personTyp);
+        [OperationContract]
+        void UpdateSynpunkt(int SynpunktsID, string enhet, DateTime datumMottagit, string synpunkText, short avseende, int personID);
+        [OperationContract]
+        void UpdateVerksamhet(string enhet, string verksamhet);
+        [OperationContract]
+        void UpdateGranskad(int dokumentNr, DateTime? datumGranskad, int synpunktID, int? LoginID);
+        //Delete-----------------------------------------------------------------------------------
+        [OperationContract]
+        void DeletePerson(int personID);
+        [OperationContract]
+        void DeleteTelefon(int telefonnummer);
+        [OperationContract]
+        void DeleteAdress(int postnummer, string gata, int personID);
+        [OperationContract]
+        void DeleteOrt(int postnummer);
+        [OperationContract]
+        void DeletePersonTyp(int personID);
+        [OperationContract]
+        void DeleteSynpunkt(int SynpunktsID);
+        [OperationContract]
+        void DeleteVerksamhet(string enhet, string verksamhet);
+        [OperationContract]
+        void DeleteGranskad(int dokumentNr);
+
     }
+    //DataContracts----------------------------------------------------------
     [DataContract]
     public class DataSender
     {
@@ -71,7 +106,6 @@ namespace HV2020.Eservice.WCF.Felanmalan
         public HashSet<SynpunktData> synpunkter { get; set; }
 
     }
-
     [DataContract]
     public class PersonData
     {   //Objekt med fjärran nycklar
@@ -272,6 +306,8 @@ namespace HV2020.Eservice.WCF.Felanmalan
         public int? LoginID { get; set; }
         [DataMember]
         public SynpunktData SynpunktData { get; set; }
+    }
+
     }
 
 }
