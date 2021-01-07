@@ -253,6 +253,7 @@ namespace HV2020.Eservice.WCF.Felanmalan
                     if (null!=db.PersonTyp.Find(personID)) {
                         db.PersonTyp.Remove(db.PersonTyp.Find(personID));
                     }
+                    db.Person.Remove(resultat);
                 }
                     db.SaveChanges();
             }
